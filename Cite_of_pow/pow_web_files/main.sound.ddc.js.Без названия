@@ -1,0 +1,54 @@
+define(['dart_sdk'], (function load__web__main(dart_sdk) {
+  'use strict';
+  const core = dart_sdk.core;
+  const html = dart_sdk.html;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  var main = Object.create(dart.library);
+  var $appendHtml = dartx.appendHtml;
+  dart._checkModuleNullSafetyMode(true);
+  var T = {
+    intAndintToint: () => (T.intAndintToint = dart.constFn(dart.fnType(core.int, [core.int, core.int])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  main.main = function main$() {
+    let t0;
+    t0 = html.querySelector("#output");
+    t0 == null ? null : t0[$appendHtml](main.getAnswer(2, 10));
+  };
+  main.getAnswer = function getAnswer(num, degree) {
+    let answer = "<br>";
+    let counter = 0;
+    function multiply(a, b) {
+      let result = a;
+      for (let i = 1; i < b; i = i + 1) {
+        answer = answer + (dart.str(counter = counter + 1) + ") " + dart.str(result) + " + " + dart.str(a) + " = " + dart.str(result + a) + "<br>");
+        result = result + a;
+      }
+      return result;
+    }
+    dart.fn(multiply, T.intAndintToint());
+    function myPow(num, degree) {
+      let result = num;
+      for (let i = 1; i < degree; i = i + 1) {
+        result = multiply(result, num);
+      }
+      return result;
+    }
+    dart.fn(myPow, T.intAndintToint());
+    myPow(num, degree);
+    return answer;
+  };
+  dart.trackLibraries("web/main", {
+    "org-dartlang-app:///web/main.dart": main
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["main.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;AAGwD,SAAtD,mBAAc;iBAAd,OAA0B,gBAAW,eAAU,GAAG;EACpD;sCAEqB,KAAS;AACrB,iBAAS;AACZ,kBAAU;AAEd,aAAI,SAAa,GAAO;AAClB,mBAAS,CAAC;AACd,eAAS,IAAI,GAAG,AAAE,CAAD,GAAG,CAAC,EAAE,IAAA,AAAC,CAAA;AACoC,QAA1D,SAAA,AAAO,MAAD,IAAoD,SAA3C,UAAF,AAAE,OAAO,GAAT,KAAU,gBAAG,MAAM,qBAAI,CAAC,qBAAK,AAAO,MAAD,GAAG,CAAC,IAAC;AAC1C,QAAX,SAAA,AAAO,MAAD,GAAI,CAAC;;AAGb,YAAO,OAAM;;;AAGf,aAAI,MAAU,KAAS;AACjB,mBAAS,GAAG;AAChB,eAAS,IAAI,GAAG,AAAE,CAAD,GAAG,MAAM,EAAE,IAAA,AAAC,CAAA;AACG,QAA9B,SAAS,QAAQ,CAAC,MAAM,EAAE,GAAG;;AAG/B,YAAO,OAAM;;;AAGG,IAAlB,KAAK,CAAC,GAAG,EAAE,MAAM;AAEjB,UAAO,OAAM;EACf","file":"main.sound.ddc.js"}');
+  // Exports:
+  return {
+    web__main: main
+  };
+}));
+
+//# sourceMappingURL=main.sound.ddc.js.map
